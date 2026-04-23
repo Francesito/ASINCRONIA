@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentacion Asincrona de Informacion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="hero">
+      <p class="eyebrow">Unidad II · Sitios Web Dinamicos</p>
+      <h1>Consulta Asincrona de Productos</h1>
+      <p class="intro">
+        Esta practica demuestra como obtener informacion desde el servidor con
+        <strong>Fetch API</strong>, procesarla con <strong>async/await</strong> y
+        actualizar la interfaz con <strong>DOM</strong> sin recargar toda la pagina.
+      </p>
+      <button id="btnCargar" type="button">Cargar productos</button>
+    </section>
+
+    <section class="panel controles">
+      <div class="campo">
+        <label for="buscador">Buscador de productos</label>
+        <input id="buscador" type="search" placeholder="Ej. laptop, mouse, audio">
+      </div>
+
+      <div class="campo">
+        <label for="filtroCategoria">Filtrar por categoria</label>
+        <select id="filtroCategoria">
+          <option value="Todas">Todas</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="panel formulario-panel">
+      <h2>Agregar producto</h2>
+      <form id="formProducto" class="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required>
+        </div>
+
+        <div class="campo">
+          <label for="precio">Precio</label>
+          <input id="precio" name="precio" type="number" min="1" step="0.01" required>
+        </div>
+
+        <div class="campo">
+          <label for="categoria">Categoria</label>
+          <input id="categoria" name="categoria" type="text" required>
+        </div>
+
+        <button type="submit" class="secundario">Agregar producto</button>
+      </form>
+    </section>
+
+    <div id="mensaje" class="mensaje" aria-live="polite"></div>
+
+    <div id="loader" class="loader oculto" aria-hidden="true">
+      <div class="spinner"></div>
+      <p>Cargando productos desde el servidor...</p>
+    </div>
+
+    <p id="sinResultados" class="sin-resultados oculto">
+      No se encontraron productos con los filtros actuales.
+    </p>
+
+    <section id="listaProductos" class="grid-productos"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

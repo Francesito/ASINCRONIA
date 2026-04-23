@@ -1,0 +1,21 @@
+{
+  "name": "practica-asincrona-web",
+  "version": "1.0.0",
+  "description": "Practica de presentacion asincrona de informacion con Node.js, Express, Fetch API y manipulacion del DOM.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "fetch",
+    "async-await",
+    "json",
+    "dom"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
